@@ -1,0 +1,48 @@
+name: greenguard_app
+description: A new Flutter project.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  freezed_annotation: ^1.1.0
+  injectable: ^1.5.0
+  get_it: ^7.2.0
+  verificac19: ^1.2.2
+  qr_code_scanner: ^0.6.1
+  intl: ^0.17.0
+  shared_preferences: ^2.0.11
+  url_launcher: ^6.0.17
+  auto_route: ^3.2.1
+  flutter_vibrate: ^1.3.0
+  audioplayers: ^0.20.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.4
+  freezed: ^1.1.0
+  build_runner: ^2.1.7
+  injectable_generator: ^1.5.2
+  auto_route_generator: ^3.2.1
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Asap
+      fonts:
+        - asset: fonts/Asap-Italic-VariableFont_wght.ttf
+          style: italic
+        - asset: fonts/Asap-VariableFont_wght.ttf
+  assets:
+    - assets/audio/beep-valid.mp3
+    - assets/audio/beep-not-valid.mp3
+
+dependency_overrides:
+  verificac19:
+    path: ../verificac19-flutter
