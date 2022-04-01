@@ -26,6 +26,7 @@ class ModeButton extends StatelessWidget {
           elevation: 0,
           onPressed: () async {
             ValidationMode? selectedMode = await showModalBottomSheet(
+              isScrollControlled: true,
               context: context,
               builder: (ctx) => const ModeSelectBottomSheet(),
               shape: RoundedRectangleBorder(

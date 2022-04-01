@@ -9,29 +9,28 @@ class ModeSelectBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.min,
-          children: const [
-            Text(
-              'Seleziona una tipologia di verifica',
-              style: TextStyle(
-                color: Color(0xFF345B63),
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            'Seleziona una tipologia di verifica',
+            style: TextStyle(
+              color: Color(0xFF345B63),
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
             ),
-            SizedBox(height: 20),
-            ModeOptionButton(mode: ValidationMode.normalDGP),
-            SizedBox(height: 10),
-            ModeOptionButton(mode: ValidationMode.superDGP),
-            SizedBox(height: 10),
-            ModeOptionButton(mode: ValidationMode.boosterDGP),
-          ],
-        ),
+          ),
+          const SizedBox(height: 20),
+          ...ValidationMode.values.expand((m) {
+            return [
+              ModeOptionButton(mode: m),
+              const SizedBox(height: 10),
+            ];
+          }),
+        ],
       ),
     );
   }

@@ -59,6 +59,12 @@ class _ResultBody extends StatelessWidget {
         return 'Rafforzata';
       case ValidationMode.boosterDGP:
         return 'Booster';
+      case ValidationMode.visitorsRSADGP:
+        return 'Visitatori RSA';
+      case ValidationMode.workDGP:
+        return "Lavoro - Over 50";
+      case ValidationMode.entryITDGP:
+        return "Entrata Italia";
     }
   }
 

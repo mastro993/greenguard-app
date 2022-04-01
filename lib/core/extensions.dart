@@ -4,22 +4,34 @@ extension ValidationModeExtensions on ValidationMode {
   get name {
     switch (this) {
       case ValidationMode.normalDGP:
-        return 'base';
+        return 'Base';
       case ValidationMode.superDGP:
-        return 'rafforzata';
+        return 'Rafforzata';
       case ValidationMode.boosterDGP:
-        return 'booster';
+        return 'Booster';
+      case ValidationMode.visitorsRSADGP:
+        return 'Visitatori RSA';
+      case ValidationMode.workDGP:
+        return 'Lavoro';
+      case ValidationMode.entryITDGP:
+        return 'Ingresso IT';
     }
   }
 
   get details {
     switch (this) {
       case ValidationMode.normalDGP:
-        return 'vaccinazione/guarigione/tampone';
+        return 'Vaccinazione, guarigione, tampone o esenzione';
       case ValidationMode.superDGP:
-        return 'vaccinazione/guarigione';
+        return 'Vaccinazione, guarigione o esenzione';
       case ValidationMode.boosterDGP:
         return 'richiamo/ciclo completo + tampone/guarigione + tampone';
+      case ValidationMode.visitorsRSADGP:
+        return 'Accesso a strutture ospedaliere, residenziali, socio-assistenziali, socio-sanitarie e hospice: vaccinazione con richiamo';
+      case ValidationMode.workDGP:
+        return 'Fino a 49 anni di età: vaccinazione, guarigione, tampone o esenzione';
+      case ValidationMode.entryITDGP:
+        return 'All\'ingresso dell\'Italia dall\'estero: vaccinazione, guarigione o tampone secondo le regole di validazione europee';
     }
   }
 }

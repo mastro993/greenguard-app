@@ -20,7 +20,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   _handleStarted(event, emit) async {
     emit(state.copyWith(updateInProgress: true));
 
-    await VerificaC19.update();
+    if (VerificaC19.needsUpdate()) {
+      await VerificaC19.update();
+    }
 
     final prefs = await SharedPreferences.getInstance();
 

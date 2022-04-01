@@ -4,6 +4,8 @@ PODS:
   - Flutter (1.0.0)
   - flutter_vibrate (0.0.1):
     - Flutter
+  - isar_flutter_libs (1.0.0):
+    - Flutter
   - MTBBarcodeScanner (5.0.11)
   - path_provider_ios (0.0.1):
     - Flutter
@@ -19,6 +21,7 @@ DEPENDENCIES:
   - audioplayers (from `.symlinks/plugins/audioplayers/ios`)
   - Flutter (from `Flutter`)
   - flutter_vibrate (from `.symlinks/plugins/flutter_vibrate/ios`)
+  - isar_flutter_libs (from `.symlinks/plugins/isar_flutter_libs/ios`)
   - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
   - qr_code_scanner (from `.symlinks/plugins/qr_code_scanner/ios`)
   - shared_preferences_ios (from `.symlinks/plugins/shared_preferences_ios/ios`)
@@ -35,6 +38,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_vibrate:
     :path: ".symlinks/plugins/flutter_vibrate/ios"
+  isar_flutter_libs:
+    :path: ".symlinks/plugins/isar_flutter_libs/ios"
   path_provider_ios:
     :path: ".symlinks/plugins/path_provider_ios/ios"
   qr_code_scanner:
@@ -48,6 +53,7 @@ SPEC CHECKSUMS:
   audioplayers: 455322b54050b30ea4b1af7cd9e9d105f74efa8c
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   flutter_vibrate: 9f4c2ab57008965f78969472367c329dd77eb801
+  isar_flutter_libs: 5a34aebdd82e388db81dad8dd26786a642bb5b90
   MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
   path_provider_ios: 7d7ce634493af4477d156294792024ec3485acd5
   qr_code_scanner: bb67d64904c3b9658ada8c402e8b4d406d5d796e
@@ -56,4 +62,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cc1f88378b4bfcf93a6ce00d2c587857c6008d3b
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
